@@ -1,11 +1,21 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
 
-export default function App() {
+import Comments from './Comments';
+import Form from './Form';
+import StoreProvider from './stores/StoreProvider';
+
+import './style.css';
+
+const App = () => {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <StoreProvider>
+      <div>
+        <h1>Opinie </h1>
+        <Comments />
+        <Form />
+      </div>
+    </StoreProvider>
   );
-}
+};
+
+export default App;
