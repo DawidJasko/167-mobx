@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { observer } from 'mobx-react';
+
 import { useCommentsStore } from './stores/hooks';
 
 const Comments = () => {
@@ -22,4 +24,4 @@ const Comments = () => {
   return <ul>{commentsElements}</ul>;
 };
 
-export default Comments;
+export default observer(Comments);
